@@ -3,7 +3,6 @@ var path = require('path');
 var http = require('http');
 
 var app = express();
-//var mode = (process.env.NODE_ENV === 'production') ? 'production': 'development';
 var mode = process.env.NODE_ENV || 'development';
 var port = 3000;
 

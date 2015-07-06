@@ -1,5 +1,5 @@
 
-require('./app.scss');
+require('./style/app.scss');
 
 var DefaultRoute = Router.DefaultRoute;
 var Route = Router.Route;
@@ -41,33 +41,3 @@ Router.run(routes, function (Handler) {
     React.render(<Handler />, document.body);
 });
 
-
-/*
-
-
-
-var Comp1 = React.createClass({
-
-    handleClick:function() {
-        var x = 27;
-        var y = 40 ;
-        var z = x + y;
-        console.log(z);
-    },
-
-
-    render: function () {
-        var x = 66;
-        var y = 90 ;
-        var z = x + y;
-        console.log(z);
-        return (
-            <div>
-                <h1  onClick={this.handleClick}>This is csdfsdfsss</h1>
-                <div> <p> hello tosadasdasdao </p> </div>
-            </div>
-        );
-    }
-});
-React.render(<Comp1/>, document.body);
-*/
