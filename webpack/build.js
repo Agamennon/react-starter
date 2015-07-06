@@ -1,7 +1,6 @@
 var webpack = require('webpack');
 
-module.exports = function(mode){
-
+module.exports = function(mode,port,dev_port){
 
     var webpackFile;
     switch (mode){
@@ -14,8 +13,6 @@ module.exports = function(mode){
     var bundleStart = null;
     var compiler = webpack(require(webpackFile));
 
-
-
     compiler.plugin('compile', function() {
         bundleStart = Date.now();
     });
@@ -27,7 +24,7 @@ module.exports = function(mode){
         var WebpackDevServer = require('webpack-dev-server');
         var bundler = new WebpackDevServer(compiler, {
             publicPath: '/build/',
-            proxy: { "*": 'http://localhost:3000'},
+            proxy: { "*": 'http://localhost:'+port},
             hot: true,
             quiet: false,
             noInfo: true,
@@ -36,7 +33,7 @@ module.exports = function(mode){
                 colors: true
             }
         });
-        bundler.listen(3001, 'localhost', function () {
+        bundler.listen(dev_port, 'localhost', function () {
             console.log('Aguarde...');
         });
     }else {

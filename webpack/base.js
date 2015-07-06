@@ -2,8 +2,6 @@ var webpack = require('webpack');
 var path = require('path');
 var p = require('./paths.js');
 
-
-
 module.exports = {
     context: p.root,
     entry: {
@@ -43,43 +41,3 @@ module.exports = {
 
     ]
 };
-
-/*
-
-module.exports =  {
-    devtool:'source-map',
-    context: __dirname,
-    entry: [
-        'webpack-dev-server/client?http://localhost:3001',
-        'webpack/hot/dev-server',
-        path.resolve(appPath, 'main.jsx')
-    ],
-    output: {
-        path: buildPath,
-        filename: 'bundle.js',
-        publicPath: '/build/'
-    },
-    module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            loaders: ['babel'],
-            exclude: [nodeModulesPath,buildPath]
-        }, {
-            test: /\.css$|scss/,
-            loader: 'style!css!sass'
-        }]
-    },
-    plugins: [
-        new Webpack.HotModuleReplacementPlugin(),
-        new Webpack.ProvidePlugin({  //qualquer hora que usar React ele preenche com require ('react/addons');
-            "React": "react/addons",   //http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals
-            "Router": "react-router",
-            "classnames": 'classnames',
-            "sa": "superagent",
-            "Reflux":"reflux",
-            "_": "lodash"
-        })
-    ]
-};
-*/
-
