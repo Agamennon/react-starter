@@ -1,3 +1,5 @@
+var Button = require('./button.jsx');
+
 var Comp1 = React.createClass({
     handleClick:function() {
         var x = 27;
@@ -12,8 +14,9 @@ var Comp1 = React.createClass({
         console.log(z);
         return (
             <div>
-                <h1 onClick={this.handleClick}>COMP 1 Bitches </h1>
+                <h1 onClick={this.handleClick}>COMP 1 Bitchesdfsdfs </h1>
                 <div className="red" > <p> hellofsdf  </p> </div>
+                <Button kind='primary'>Radium Button</Button>
             </div>
         );
     }

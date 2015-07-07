@@ -11,7 +11,7 @@ module.exports = function(mode,port,dev_port){
     }
 
     var bundleStart = null;
-    var compiler = webpack(require(webpackFile));
+    var compiler = webpack(require(webpackFile)(dev_port));
 
     compiler.plugin('compile', function() {
         bundleStart = Date.now();

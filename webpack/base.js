@@ -25,6 +25,10 @@ module.exports = {
             {
                 test: /\.css$|scss/,
                 loader: 'style!css!sass'
+            },
+            {
+                test: /\.json/,
+                loader: 'json'
             }
         ]
     },
@@ -33,6 +37,8 @@ module.exports = {
         new webpack.ProvidePlugin({  //qualquer hora que usar React ele preenche com require ('react/addons');
             "React": "react/addons",   //http://stackoverflow.com/questions/23305599/webpack-provideplugin-vs-externals
             "Router": "react-router",
+            "Radium": "radium",
+            "color": "color",
             "classnames": 'classnames',
             "sa": "superagent",
             "Reflux":"reflux",
