@@ -1,5 +1,3 @@
-// para o se usar PhantomJS ES5 shims for Function.prototype.bind, Object.prototype.keys, etc.
-//require('core-js/es5');
 
 var app = require.context('./app', true, /-test\.js$/); //make sure you have your directory and regex test set correctly!
 var server = require.context('./server', true, /-test\.js$/); //make sure you have your directory and regex test set correctly!
