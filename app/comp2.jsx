@@ -1,10 +1,20 @@
 var Comp2 = React.createClass({
 
+    getInitialState: function(){
+        return {nome:'leo'}
+    },
+
     handleClick:function() {
         var x = 27;
         var y = 40 ;
         var z = x + y;
+
+        this.setState({
+            nome:'gui'
+        });
         console.log(z);
+        return 101;
+
     },
 
 
@@ -15,7 +25,7 @@ var Comp2 = React.createClass({
         console.log(z);
         return (
             <div>
-                <h1  onClick={this.handleClick}>Comp2</h1>
+                <h1 ref='h1' onClick={this.handleClick}>Comp2</h1>
                 <div> <p> this is working !!! </p> </div>
             </div>
         );
