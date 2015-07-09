@@ -12,8 +12,10 @@ configs are on ./webpack folder as follows:
 - production.js [NODE_ENV=production]
 
 ```
-base.js is the base webpack config for all other configs, others only add, delete or modify base.js
-paths.js is only a path object helper that provide the paths to configs alter this to your needs
+base.js is the base webpack config for all other configs,
+others only add, delete or modify base.js
+paths.js is only a path object helper that provide the paths to configs
+alter this to your needs
 ```
 just set your NODE_ENV accordingly and start server.js, defaults to port 4000 all but production, that lives on port 3000
 
@@ -29,4 +31,4 @@ if you are using react-hotify remember it only works only on ES6 classes and wit
 
 ## Tests
 karma.conf is your kamra config it uses karma-webpack plugin (its fed with base.conf), the file karma.webpack.js 
-is where you inform the karma-webpack plugin what files to run, alter the regex to meet your needs. karma.conf.js 
+is where you inform the karma-webpack plugin what files to run, alter the regex to meet your needs.
