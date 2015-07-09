@@ -1,35 +1,24 @@
-var Comp2 = React.createClass({
+export class Comp2 extends React.Component {
 
-    getInitialState: function(){
-        return {nome:'leo'}
-    },
-
-    handleClick:function() {
-        var x = 27;
-        var y = 40 ;
-        var z = x + y;
-
-        this.setState({
-            nome:'gui'
-        });
-        console.log(z);
-        return 101;
-
-    },
-
-
-    render: function () {
-        var x = 66;
-        var y = 90 ;
-        var z = x + y;
-        console.log(z);
-        return (
-            <div>
-                <h1 ref='h1' onClick={this.handleClick}>Comp2</h1>
-                <div> <p> this is working !!! </p> </div>
-            </div>
-        );
+    constructor(props) {
+        super(props);
+        this.handleClick = this.handleClick.bind(this);
+        //this.styles = sty;
     }
-});
 
-module.exports = Comp2;
+    handleClick () {
+        var x = 27;
+        var y = 31 ;
+        var z = x + y;
+        console.log(z);
+    };
+
+    render(){
+
+        return (
+            <div >
+                <button onClick={this.handleClick}>Testtt</button>
+            </div>
+        )
+    }
+}

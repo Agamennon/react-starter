@@ -1,6 +1,4 @@
-
-
-var Comp1 = React.createClass({
+var Comp0 = React.createClass({
     handleClick:function() {
         var x = 27;
         var y = u ;
@@ -14,11 +12,11 @@ var Comp1 = React.createClass({
         console.log(z);
         return (
             <div>
-                <h1 onClick={this.handleClick}>COMP 1 Bitchesdfsdfs </h1>
-                <div className="red" > <p> hellofsdffgfg  </p> </div>
+                <h1 onClick={this.handleClick}>COMP 0 Bitchesdfsdfs </h1>
+                <div className="red" > <p> hellofsdf  </p> </div>
 
             </div>
         );
     }
 });
-module.exports = Comp1;
+module.exports = Comp0;

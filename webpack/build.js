@@ -6,6 +6,7 @@ module.exports = function(mode,port,dev_port){
     switch (mode){
         case 'development':  webpackFile = './development.js'; break;
         case 'hot':  webpackFile = './hot.js'; break;
+        case 'hotify':  webpackFile = './hotify.js'; break;
         case 'production': webpackFile ='./production.js'; break;
         case 'test': webpackFile ='./test.js'; break;
     }

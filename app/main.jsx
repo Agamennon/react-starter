@@ -6,8 +6,9 @@ var Route = Router.Route;
 var RouteHandler = Router.RouteHandler;
 var Link = Router.Link;
 
+var Comp0 = require('./comp0.jsx');
 var Comp1 = require('./comp1.jsx');
-var Comp2 = require('./comp2.jsx');
+import {Comp2} from './comp2.jsx';
 
 
 var App = React.createClass({
@@ -17,6 +18,7 @@ var App = React.createClass({
         return (
             <div>
                 <div >
+                    <li><Link to="comp0">comp0</Link></li>
                     <li><Link to="comp1">comp1</Link></li>
                     <li><Link to="comp2">comp2</Link></li>
                 </div>
@@ -33,6 +35,7 @@ var routes = (
     <Route name="app" path="/" handler={App}>
         <Route name="comp1"  handler={Comp1}/>
         <Route name="comp2"  handler={Comp2}/>
+        <DefaultRoute name="comp0"  handler={Comp0}/>
     </Route>
 );
 
