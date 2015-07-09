@@ -18,7 +18,7 @@ module.exports = function(dev_port) {
         new webpack.NoErrorsPlugin()
     ],cfg.plugins);
 
-
+    cfg.module.loaders[0].loaders[0] = cfg.module.loaders[0].loaders[0]  + '&plugins[]=babel-plugin-react-hotify';
     return cfg;
 };
 

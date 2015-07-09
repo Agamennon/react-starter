@@ -1,4 +1,6 @@
 var Comp0 = React.createClass({
+
+
     handleClick:function() {
         var x = 27;
         var y = u ;

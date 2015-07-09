@@ -19,7 +19,6 @@ module.exports = function(dev_port) {
     ],cfg.plugins);
 
     cfg.module.loaders[0].loaders.unshift('react-hot');
-
     return cfg;
 };
 

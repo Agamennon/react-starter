@@ -19,7 +19,9 @@ module.exports = {
         loaders: [
             {
                 test: /\.jsx?$/,
-                loaders: ['babel'],
+                loaders: [
+                    'babel?stage=0'
+                ],
                 exclude: [p.node,p.build]
             },
             {
