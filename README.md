@@ -1,6 +1,6 @@
 # Gui's React Starter
 
-** Webpack + hot-module-replacement + react-hot-loader + react-hotify + karma for tests **
+**Webpack + hot-module-replacement + react-hot-loader + react-hotify + karma for tests**
 
 ## Webpack:
 
