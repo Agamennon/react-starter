@@ -1,18 +1,18 @@
 var webpack = require('webpack');
-
-module.exports = function(mode,port,dev_port){
+var path = require('path');
+module.exports = function(mode,port,dev_port,paths){
 
     var webpackFile;
+
     switch (mode){
-        case 'development':  webpackFile = './development.js'; break;
-        case 'hot':  webpackFile = './hot.js'; break;
-        case 'hotify':  webpackFile = './hotify.js'; break;
-        case 'production': webpackFile ='./production.js'; break;
-        case 'test': webpackFile ='./test.js'; break;
+        case 'development':  webpackFile = path.resolve(paths.webpack,'development.webpack.js'); break;
+        case 'hot':  webpackFile =  path.resolve(paths.webpack,'hot.webpack.js'); break;
+        case 'hotify':  webpackFile = path.resolve(paths.webpack,'hotify.webpack.js'); break;
+        case 'production': webpackFile = path.resolve(paths.webpack,'hot.production.js'); break;
     }
 
     var bundleStart = null;
-    var compiler = webpack(require(webpackFile)(dev_port));
+    var compiler = webpack(require(webpackFile)(dev_port,paths));
 
     compiler.plugin('compile', function() {
         bundleStart = Date.now();
@@ -29,6 +29,8 @@ module.exports = function(mode,port,dev_port){
             hot: true,
             quiet: false,
             noInfo: true,
+            headers: { 'Access-Control-Allow-Origin': '*' },
+            historyApiFallback: true,
             stats: {
                 progress:true,
                 colors: true

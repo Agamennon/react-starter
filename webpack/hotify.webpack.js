@@ -1,10 +1,9 @@
 var webpack = require('webpack');
 var _ = require('lodash');
-var cfg =  require('./base.js');
 
+module.exports = function(dev_port,paths) {
 
-module.exports = function(dev_port) {
-
+    var cfg =  require(path.resolve(paths.webpack,'base.webpack.js'))(paths);
 //cfg.devtool = 'cheap-module-eval-source-map';
     cfg.devtool = 'eval';
 
@@ -18,10 +17,8 @@ module.exports = function(dev_port) {
         new webpack.NoErrorsPlugin()
     ],cfg.plugins);
 
-    cfg.module.loaders[0].loaders.unshift('react-hot');
+    cfg.module.loaders[0].loaders[0] = cfg.module.loaders[0].loaders[0]  + '&plugins[]=babel-plugin-react-hotify';
     return cfg;
 };
 
-
-//module.exports = cfg;
 
