@@ -3,13 +3,12 @@ var _ = require('lodash');
 var path = require('path');
 
 
-
 module.exports = function(dev_port,paths) {
-  //  var cfg =  require(path.resolve(paths.webpack,'base.webpack.js'))(paths);
+
     var cfg =  require(path.resolve(paths.webpack,'base.webpack.js'))(paths);
 
 //cfg.devtool = 'cheap-module-eval-source-map';
-//    cfg.devtool = 'source-map';  //usando SourceMapDevToolPlugin para o webpack pegar isso
+ //   cfg.devtool = 'eval';  //usando SourceMapDevToolPlugin para o webpack pegar isso
 
     cfg.entry.app = _.union([
         'webpack-dev-server/client?http://localhost:'+dev_port,

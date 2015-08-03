@@ -8,7 +8,7 @@ module.exports = function(mode,port,dev_port,paths){
         case 'development':  webpackFile = path.resolve(paths.webpack,'development.webpack.js'); break;
         case 'hot':  webpackFile =  path.resolve(paths.webpack,'hot.webpack.js'); break;
         case 'hotify':  webpackFile = path.resolve(paths.webpack,'hotify.webpack.js'); break;
-        case 'production': webpackFile = path.resolve(paths.webpack,'hot.production.js'); break;
+        case 'production': webpackFile = path.resolve(paths.webpack,'production.webpack.js'); break;
     }
 
     var bundleStart = null;

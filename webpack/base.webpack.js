@@ -16,7 +16,7 @@ module.exports = function base (p){
             app: [
                 path.resolve(p.app, 'main.jsx')
             ],
-            vendors:['react/addons','react-router']
+            vendors:['react/addons']
         },
         output: {
             path: p.build,
@@ -30,6 +30,7 @@ module.exports = function base (p){
                     loaders: [
                         'babel?stage=0'
                     ],
+
                     exclude: [p.node,p.build]
                 },
                 {

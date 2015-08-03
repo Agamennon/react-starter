@@ -5,7 +5,7 @@ module.exports = function(dev_port,paths) {
 
     var cfg =  require(path.resolve(paths.webpack,'base.webpack.js'))(paths);
 //cfg.devtool = 'cheap-module-eval-source-map';
-    cfg.devtool = 'eval';
+ //   cfg.devtool = 'eval';
 
     cfg.entry.app = _.union([
         'webpack-dev-server/client?http://localhost:'+dev_port,
@@ -14,7 +14,10 @@ module.exports = function(dev_port,paths) {
 
     cfg.plugins = _.union([
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin(),
+        new webpack.SourceMapDevToolPlugin(
+            '[file].map', null,
+            "[absolute-resource-path]", "[absolute-resource-path]")
     ],cfg.plugins);
 
     cfg.module.loaders[0].loaders[0] = cfg.module.loaders[0].loaders[0]  + '&plugins[]=babel-plugin-react-hotify';
