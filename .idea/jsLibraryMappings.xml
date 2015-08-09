@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{start node_modules}" />
+    <file url="file://$PROJECT_DIR$/app/__tests__/comp1-test.js" libraries="{jasmine-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/app/main.jsx" libraries="{Node.js v0.12.1 Core Modules}" />
+    <file url="file://$PROJECT_DIR$/server.js" libraries="{Node.js v0.12.1 Core Modules}" />
+    <file url="file://$PROJECT_DIR$/server/__tests__/simple-test.js" libraries="{jasmine-DefinitelyTyped}" />
+    <file url="file://$PROJECT_DIR$/server/configurations.js" libraries="{Node.js v0.12.1 Core Modules}" />
+    <file url="file://$PROJECT_DIR$/webpack/base.webpack.js" libraries="{Node.js v0.10.36 Core Modules, Node.js v0.12.1 Core Modules}" />
+    <file url="file://$PROJECT_DIR$/webpack/bundler/bundler.js" libraries="{Node.js v0.12.1 Core Modules}" />
+    <file url="PROJECT" libraries="{JSXTransformer-0.13.1}" />
+    <includedPredefinedLibrary name="ECMAScript 6" />
+  </component>
+</project>

@@ -8,7 +8,7 @@ export default class Comp1 extends React.Component {
 
     }
     handleClick (){
-        var x = 10;
+        var x = 20;
         var y = x + 50;
         console.log('hello y = '+y);
     }
